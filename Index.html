@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Duck or Hare Consulting | Jack O’Neal | Dallas, Texas</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:#ffffff;
+    color:#111;
+}
+
+.wrapper{
+    max-width:800px;
+    margin:auto;
+    padding:80px 20px;
+    text-align:center;
+}
+
+h1{
+    font-weight:600;
+    font-size:38px;
+    letter-spacing:.02em;
+    margin-bottom:6px;
+}
+
+.subtitle{
+    color:#666;
+    font-size:16px;
+    margin-bottom:60px;
+}
+
+.image-container{
+    perspective:1000px;
+}
+
+img{
+    width:360px;
+    cursor:pointer;
+    transition:transform .6s cubic-bezier(.4,0,.2,1);
+}
+
+.caption{
+    margin-top:18px;
+    font-size:14px;
+    color:#777;
+}
+
+.quote{
+    margin-top:60px;
+    font-size:16px;
+    color:#444;
+    font-style:italic;
+}
+
+footer{
+    margin-top:80px;
+    font-size:13px;
+    color:#888;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<h1>Duck or Hare Consulting</h1>
+
+<div class="subtitle">
+Jack O’Neal · Dallas, Texas
+</div>
+
+<div class="image-container">
+<img id="illusion" src="duck-rabbit.png" alt="Duck Rabbit Illusion">
+</div>
+
+<div class="caption">
+Click the image to change what you see.
+</div>
+
+<div class="quote">
+“The aspect dawns.”
+<br>
+— Ludwig Wittgenstein
+</div>
+
+<footer>
+Perception shapes interpretation.
+</footer>
+
+</div>
+
+<script>
+
+let flipped = false;
+const img = document.getElementById("illusion");
+
+img.addEventListener("click", function(){
+
+    flipped = !flipped;
+
+    if(flipped){
+        img.style.transform = "rotate(180deg)";
+    }else{
+        img.style.transform = "rotate(0deg)";
+    }
+
+});
+
+</script>
+
+</body>
+</html>
